@@ -1,0 +1,78 @@
+/* Base Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+/* Header Styling */
+header {
+  background-color: #000000;
+  color: #FFD700;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Navigation Styling with CSS Transitions */
+.main-nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+}
+
+/* Main Content */
+main {
+  margin-top: 25px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid #FFD700;
+  border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #333;
+}
