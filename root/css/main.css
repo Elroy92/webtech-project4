@@ -1,4 +1,3 @@
-/* Base Styling */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -7,24 +6,42 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #222; /* Darker text color for better contrast */
+  color: #222;
 }
 
-/* Header Styling */
 header {
-  background-color: transparent; /* Remove black background */
+  background-color: transparent;
   color: #FFD700;
   padding: 15px 0;
   text-align: center;
-  font-size: 1.2em; /* Slightly increase font size */
+  font-size: 1.2em;
 }
 
-/* Navigation Styling with CSS Transitions */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #FFD700;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 120px;
+  height: auto;
+  transform: translateX(-280px);
+}
+
+.main-nav {
+  transform: translateX(-230px);
+}
+
 .main-nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -32,7 +49,7 @@ header {
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1em; /* Adjust font size for better readability */
+  font-size: 1em;
   transition: color 0.3s ease;
 }
 
@@ -40,56 +57,56 @@ header {
   color: #ffffff;
 }
 
-/* Main Content */
 main {
   margin-top: 25px;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
 }
 
 h1, h2 {
   margin-bottom: 15px;
-  color: #333; /* Darker color for better contrast */
-  font-family: 'Georgia', serif; /* Add a serif font for headings */
+  color: #ffffff;
+  font-family: 'Georgia', serif;
 }
 
 h1 {
-  font-size: 2.5em; /* Larger font size for main headings */
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 1.8em; /* Slightly smaller for subheadings */
+  font-size: 1.8em;
 }
 
 p {
   margin-bottom: 15px;
-  line-height: 1.8; /* Increase line height for better readability */
-  font-size: 1.1em; /* Slightly larger font size */
-  color: #444; /* Softer color for body text */
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #ffffff;
 }
 
-/* Image Gallery */
 .image-gallery {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .image-gallery img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   object-fit: cover;
   border: 3px solid #FFD700;
   border-radius: 8px;
 }
 
-/* Hero Section */
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -104,13 +121,11 @@ p {
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color: #ffffff; /* Change text color to white */
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #ffffff; /* Change text color to white */
 }
 
 .cta-button {
@@ -130,18 +145,18 @@ p {
 }
 
 .back-to-top {
-  display: block; /* Ensure it behaves like a block element */
-  margin: 20px auto; /* Center the button horizontally */
+  display: block;
+  margin: 20px auto;
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
   padding: 10px 20px;
-  background-color: #000; /* Add a background color */
+  background-color: #000;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
   text-align: center;
-  width: fit-content; /* Adjust width to fit the content */
+  width: fit-content;
 }
 
 .back-to-top:hover {
@@ -153,10 +168,62 @@ footer {
   width: 100%;
   height: auto;
   text-align: center;
-  margin-top: 10px; /* Adjust margin to account for the button */
+  margin-top: 10px;
   font-size: 0.8em;
-  color: #333;
+  color: #ffffff;
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-top: 2px solid #FFD700;
+  background-color: transparent;
+  border-top: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 1em;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .image-gallery img {
+    max-width: 100%;
+  }
+
+  main {
+    padding: 15px;
+  }
 }
