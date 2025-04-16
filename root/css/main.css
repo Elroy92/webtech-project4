@@ -1,21 +1,22 @@
 /* Base Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 20px;
-  background-image: url('../images/CR7BG.jpg');
+  background-image: url('../images/CR7BG.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #111;
+  color: #222; /* Darker text color for better contrast */
 }
 
 /* Header Styling */
 header {
-  background-color: #000000;
+  background-color: transparent; /* Remove black background */
   color: #FFD700;
   padding: 15px 0;
   text-align: center;
+  font-size: 1.2em; /* Slightly increase font size */
 }
 
 /* Navigation Styling with CSS Transitions */
@@ -31,6 +32,7 @@ header {
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em; /* Adjust font size for better readability */
   transition: color 0.3s ease;
 }
 
@@ -44,16 +46,31 @@ main {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
 }
 
 h1, h2 {
   margin-bottom: 15px;
-  color: #000000;
+  color: #333; /* Darker color for better contrast */
+  font-family: 'Georgia', serif; /* Add a serif font for headings */
+}
+
+h1 {
+  font-size: 2.5em; /* Larger font size for main headings */
+}
+
+h2 {
+  font-size: 1.8em; /* Slightly smaller for subheadings */
 }
 
 p {
   margin-bottom: 15px;
-  line-height: 1.6;
+  line-height: 1.8; /* Increase line height for better readability */
+  font-size: 1.1em; /* Slightly larger font size */
+  color: #444; /* Softer color for body text */
 }
 
 /* Image Gallery */
@@ -80,16 +97,20 @@ p {
   color: #ffffff;
   text-align: center;
   padding: 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  color: #ffffff; /* Change text color to white */
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #ffffff; /* Change text color to white */
 }
 
 .cta-button {
@@ -109,21 +130,33 @@ p {
 }
 
 .back-to-top {
-  display: inline-block;
-  margin-top: 20px;
+  display: block; /* Ensure it behaves like a block element */
+  margin: 20px auto; /* Center the button horizontally */
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #000; /* Add a background color */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  width: fit-content; /* Adjust width to fit the content */
 }
 
 .back-to-top:hover {
+  background-color: #FFD700;
   color: #000;
 }
 
 footer {
+  width: 100%;
+  height: auto;
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
+  margin-top: 10px; /* Adjust margin to account for the button */
+  font-size: 0.8em;
   color: #333;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 2px solid #FFD700;
 }
